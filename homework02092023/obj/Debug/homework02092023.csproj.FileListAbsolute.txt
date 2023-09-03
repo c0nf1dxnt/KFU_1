@@ -1,0 +1,7 @@
+D:\Code\kfuHomework\homework02092023\bin\Debug\homework02092023.exe.config
+D:\Code\kfuHomework\homework02092023\bin\Debug\homework02092023.exe
+D:\Code\kfuHomework\homework02092023\bin\Debug\homework02092023.pdb
+D:\Code\kfuHomework\homework02092023\obj\Debug\homework02092023.csproj.AssemblyReference.cache
+D:\Code\kfuHomework\homework02092023\obj\Debug\homework02092023.csproj.CoreCompileInputs.cache
+D:\Code\kfuHomework\homework02092023\obj\Debug\homework02092023.exe
+D:\Code\kfuHomework\homework02092023\obj\Debug\homework02092023.pdb
