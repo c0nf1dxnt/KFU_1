@@ -1,4 +1,6 @@
-﻿using System;
+﻿//c0nf1dxnt code
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
