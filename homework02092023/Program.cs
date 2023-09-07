@@ -1,15 +1,5 @@
-﻿//c0nf1dxnt code
-//11:45 PM 9/4/2023
-//9:23 PM
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 
 namespace homework02092023
 {
@@ -18,7 +8,8 @@ namespace homework02092023
         static void task1()
         {
             Console.WriteLine("Task1:");
-            Console.WriteLine("Задание: Вывод трёх строк в указанном в файле с домашним заданием порядке\n");
+            Console.WriteLine("Задание: Вывод трёх строк в указанном в файле " +
+                "с домашним заданием порядке\n");
             Console.WriteLine("a. Мир Труд Май");
             Console.WriteLine("b. Мир");
             Console.WriteLine("     Труд");
@@ -27,13 +18,20 @@ namespace homework02092023
         static void task2()
         {
             Console.WriteLine("Task2:");
-            Console.WriteLine("Задание: \n");
-            Console.WriteLine("\n");
+            Console.WriteLine("Задание: Считать с клавиатуры 2 переменные и" +
+                " поменять их местами\n");
+            Console.Write("Переменная 1 равна: ");
+            string a = Console.ReadLine();
+            Console.Write("Переменная 2 равна: ");
+            string b = Console.ReadLine();
+            Console.WriteLine("После обмена значений:");
+            Console.WriteLine($"Переменная 1 равна: {b}\nПеременная 2 равна: {a}\n");
         }
         static void task3()
         {
             Console.WriteLine("Task3:");
-            Console.WriteLine("Задание: Считать с клавиатуры радиус и вывести длину соответствующей окружности и площадь круга\n");
+            Console.WriteLine("Задание: Считать с клавиатуры радиус и вывести" +
+                "длину соответствующей окружности и площадь круга\n");
             Console.Write("Радиус окружности равен: ");
             double radius = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Длина окружности равна: " + 2 * radius * Math.PI);
@@ -42,7 +40,7 @@ namespace homework02092023
         static void task4()
         {
             Console.WriteLine("Task4:");
-            Console.WriteLine("Задание: Найти значение y = cos(x), считать x с клавиатуры\n");
+            Console.WriteLine("Задание: Найти значение y = cos(x), считать x(в р) с клавиатуры\n");
             Console.Write("x = ");
             Console.WriteLine("y = " + Math.Cos(Convert.ToDouble(Console.ReadLine())) + "\n");
         }
@@ -58,11 +56,13 @@ namespace homework02092023
             Console.Write("Введите коэффициент \"c\" квадратного уравнения: ");
             int c = Convert.ToInt32(Console.ReadLine());
 
-            if (Math.Pow(b, 2) - 4 * a * c < 0)
+            double discriminant = Math.Pow(b, 2) - 4 * a * c;
+
+            if (discriminant < 0)
             {
                 Console.WriteLine("Корней нет\n");
             }
-            else if (Math.Pow(b, 2) - 4 * a * c == 0)
+            else if (discriminant == 0)
             {
                 Console.WriteLine("Один корень");
                 Console.WriteLine("x = " + (-b / (2 * a)) + "\n");
@@ -79,7 +79,7 @@ namespace homework02092023
         static void task6()
         {
             Console.WriteLine("Task6:");
-            Console.WriteLine("Задание 6: Считать числа a,b,c с клавиатуры и обменять их значения\n");
+            Console.WriteLine("Задание 6: Считать числа a,b,c с и обменять их значения\n");
             Console.Write("Переменная а равна: ");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.Write("Переменная b равна: ");
@@ -114,7 +114,8 @@ namespace homework02092023
         static void task8()
         {
             Console.WriteLine("Task8:");
-            Console.WriteLine("Задание: Ввести трёхзначное число и перенести самую правую цифру в начало\n");
+            Console.WriteLine("Задание: Ввести трёхзначное число и перенести " +
+                "самую правую цифру в начало\n");
             Console.Write("Введите трёхзначное число: ");
             string number = Console.ReadLine();
             if (number.Length != 3 || number[0] == '0')
@@ -124,17 +125,19 @@ namespace homework02092023
             else
             {
                 number = number[2] + number.Remove(number.Length - 1);
-                Console.WriteLine("Полученное число: " + Convert.ToInt32(number) + "\n");
+                Console.WriteLine($"Полученное число: {number} \n") ;
             }
         }
         static void task9()
         {
             Console.WriteLine("Task9:");
-            Console.WriteLine("Задание: Считать с клавиатуры стоимость 1 кг конфет, печенья, яблок и вес купленных конфет, печенья и яблок, а затем вывести стоимость покупки\n");
+            Console.WriteLine("Задание: Считать с клавиатуры стоимость 1 кг конфет, печенья," +
+                "яблок и вес купленных конфет, печенья и яблок, а затем вывести стоимость" +
+                " покупки\n");
             Console.Write("Введите стоимость конфет за кг:");
             double priceOfCandy = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите стоимость печенья за кг:");
-            double priceOfCookies = Convert.ToDouble(Console.ReadLine());
+            double priceOfCookie = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите стоимость яблок за кг:");
             double priceOfApple = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите вес конфет:");
@@ -144,7 +147,8 @@ namespace homework02092023
             Console.Write("Введите вес яблок:");
             double z = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Стоимость всей покупки равна: " + (priceOfCandy * x + priceOfCookies * y + priceOfApple * z) + "\n");
+            Console.WriteLine("Стоимость всей покупки равна: "
+                + (priceOfCandy * x + priceOfCookie * y + priceOfApple * z) + "\n");
         }
 
         static void Main(string[] args)
@@ -153,15 +157,15 @@ namespace homework02092023
             Console.ForegroundColor = ConsoleColor.Green;
             Console.OutputEncoding = Encoding.UTF8;
 
-            //task1();
-            //task2();
-            //task3();
-            //task4();
-            //task5();
+            task1();
+            task2();
+            task3();
+            task4();
+            task5();
             task6();
-            //task7();
-            //task8();
-            //task9();
+            task7();
+            task8();
+            task9();
 
             Console.ReadKey();
         }
